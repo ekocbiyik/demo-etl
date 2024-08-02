@@ -1,0 +1,45 @@
+version: '3.9'
+
+services:
+
+  launcher:
+    container_name: launcher
+    image: launcher:latest
+    ports:
+      - "9090:9090"
+    restart: no
+
+  etl-manager:
+    container_name: etl-manager
+    image: etl-manager:latest
+    ports:
+      - "8080:8080"
+    restart: no
+
+  download-engine:
+    container_name: download-engine
+    image: download-engine:latest
+    ports:
+      - "8081:8081"
+    restart: no
+
+  validation-engine:
+    container_name: validation-engine
+    image: validation-engine:latest
+    ports:
+      - "8082:8082"
+    restart: no
+
+  parser-engine:
+    container_name: parser-engine
+    image: parser-engine:latest
+    ports:
+      - "8083:8083"
+    restart: no
+
+  aggregation-engine:
+    container_name: aggregation-engine
+    image: aggregation-engine:latest
+    ports:
+      - "8084:8084"
+    restart: no
